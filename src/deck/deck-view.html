@@ -1,0 +1,14 @@
+<style>
+    @import url('deck.css');
+    @import url('objects.css');
+</style>
+<h3 class="c-deck__name">{{deck.nome}}</h3>
+<div data-ui-component="deck-cards-list">
+    <h4>Cards</h4>
+    <button class="o-btn" (click)="adicionaCards()">Adicionar</button>
+    <ul class="c-deck-list">
+        <li *ngFor="#card of deck.cards" class="c-deck-list__item--card">
+            <flashcard [card]="card"></flashcard>
+        </li>
+    </ul>
+</div>

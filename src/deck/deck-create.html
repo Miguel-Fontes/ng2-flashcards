@@ -1,0 +1,29 @@
+<style>
+    @import url('deck.css');
+    @import url('objects.css');
+    @import url('ng.css');
+</style>
+<h3>Novo Deck</h3>
+<div class="c-deck-form"  >
+    <form (ngSubmit)="onSubmit()" #deckForm="ngForm">
+        <div class="o-form-group">
+            <label for="nome" class="o-form-label">Nome</label>
+            <input type="text" id="nome" class="[ o-form-input o-form-input--full ]" required
+            [(ngModel)]="deck.nome"
+            ngControl="nome"
+            #spy
+            #nome="ngForm">
+
+            <div [hidden]="nome.valid || nome.pristine" class="alert alert-danger">
+                Name is required
+            </div>
+
+        </div>
+        <button type="submit" class="o-btn o-btn-default" [disabled]="!deckForm.form.valid">
+            Criar
+        </button>
+
+    </form>
+
+</div>
+

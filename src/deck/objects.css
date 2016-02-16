@@ -1,0 +1,58 @@
+.o-form-group {
+    margin-bottom: 0.5em;
+}
+
+.o-form-group:last-child {
+    margin-bottom: 0em;
+}
+
+.o-form-input {
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.o-form-input--full {
+    width: 100%
+}
+
+.o-form-label {
+    font-weight: bold;
+    padding: 0.2em;
+    display: block;
+}
+
+.o-unstyled-list {
+    list-style: none;
+}
+
+.o-horizontal-list {
+    padding: 0;
+    margin-left: -0.5em
+}
+
+.o-horizontal-list__item {
+    display: inline-block;
+    margin: 0 0 0.5em 0.5em;
+}
+
+.o-flex {
+    display: flex;
+}
+
+.o-flex--wrap {
+    flex-wrap: wrap;
+}
+
+.o-btn {
+    background-color: white;
+    border: 1px solid lightgrey;
+    display: inline-block;
+    min-width: 6em;
+    line-height: 2em;
+}
+
+.o-btn:hover {
+    background-color: lightgrey;
+    border-color: grey;
+    cursor: pointer;
+}

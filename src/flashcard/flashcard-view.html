@@ -1,0 +1,10 @@
+<style>
+    @import url('flashcard.css');
+</style>
+<div class="c-flashcard">
+    <p class="c-flashcard__content"> {{card.frente}} </p>
+    <div class="c-flashcard__data-section" (click)="exibeDados()">
+        <h3 class="c-flashcard__title">Resposta</h3>
+        <p [class.is-hidden]="isHidden" class="c-flashcard__content">{{card.verso}}</p>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+.c-deck-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-left: -0.5em
+
+}
+
+.c-deck-list__item {
+    background-color: white;
+    padding: 1em;
+    width: 12.14%;
+    height: 10%;
+    margin: 0 0 0.5em 0.5em;
+    cursor: pointer;
+}
+
+.c-deck-list__item--card {
+    padding: 1em;
+    width: 47.8%;
+    height: 10%;
+    margin: 0 0 0.5em 0.5em;
+}
+
+
+.c-deck-control {
+    background-color: white;
+    cursor: pointer;
+    padding: 1em;
+    height: 10%;
+}
+
+.c-deck-form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.c-cards-form__row {
+    margin-bottom: 0.5em;
+}
+
+.c-cards-form__group {
+    width: 49.2%
+}
+
+.c-cards-form {
+    width: 100%;
+}
+
+
+.c-cards-form__label {
+    margin-right: 0.5%;
+}
+
+.c-cards-form__input {
+    width: 95%;
+}

@@ -1,0 +1,30 @@
+.c-flashcard {
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0,0,0,0.12),0 2px 4px rgba(0,0,0,0.24);
+    margin: 1em auto; /* REMOVER O MARGIN-TOP*/
+    width: 80%;
+    min-height: 20em;
+    padding: 2em;
+}
+
+.c-flashcard__content{
+   font-size: 1.5em;
+   height: 100%;
+   padding: 0 0.5em;
+}
+
+.is-hidden {
+    transition: display 2s;
+    display: none;
+}
+
+.c-flashcard__data-section {
+    border: 1px solid grey;
+}
+
+.c-flashcard__title {
+    background-color: lightsteelblue;
+    line-height: 1.3em;
+    padding: 0em 1em;
+    margin: 0 0;
+}
