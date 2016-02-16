@@ -7,6 +7,7 @@ import {DeckViewComponent} from './deck-view.component';
 import {DeckListComponent} from './deck-list.component';
 import {DeckCreateComponent} from './deck-create.component';
 import {DeckCardsComponent} from './deck-cards.component';
+import {FlashcardPlayComponent} from './../flashcard/flashcard-play.component';
 
 @Component({
     selector: 'deck',
@@ -19,7 +20,8 @@ import {DeckCardsComponent} from './deck-cards.component';
     { path: '/', name: 'DeckList', component: DeckListComponent, useAsDefault: true},
     { path: '/:id', name: 'DeckView', component: DeckViewComponent },
     { path: '/novo', name: 'DeckCreate', component: DeckCreateComponent },
-    { path: '/cards/:id', name: 'DeckCards', component: DeckCardsComponent }
+    { path: '/cards/:id', name: 'DeckCards', component: DeckCardsComponent },
+    { path: '/play/:id', name: 'DeckPlay', component: FlashcardPlayComponent },
 ])
 
 export class DeckComponent implements OnInit {

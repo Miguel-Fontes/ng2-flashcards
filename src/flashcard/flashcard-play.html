@@ -1,5 +1,9 @@
-<ul *ngFor="#card of cards">
-    <li>
-        <flashcard-view [card]="card"></flashcard-view>
+<style>
+    @import url('./../deck/deck.css');
+    @import url('./../deck/objects.css');
+</style>
+<ul *ngFor="#card of deck.cards" class="o-flex o-unstyled-list">
+    <li class="">
+        <flashcard [card]="card"></flashcard>
     </li>
 </ul>
