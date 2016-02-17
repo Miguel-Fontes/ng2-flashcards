@@ -56,3 +56,26 @@
     border-color: grey;
     cursor: pointer;
 }
+
+.o-btn--ok {
+    background-color: palegreen;
+}
+
+.o-btn--ok:hover {
+    background-color: lawngreen;
+    cursor: pointer;
+}
+
+.o-btn--danger {
+    background-color: indianred;
+}
+
+.o-btn--danger:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.o-btn--big {
+    min-width: 10em;
+    line-height: 3em;
+}
