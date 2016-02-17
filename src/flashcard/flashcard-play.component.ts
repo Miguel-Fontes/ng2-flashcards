@@ -15,8 +15,12 @@ export class FlashcardPlayComponent implements OnInit {
     private deck: Deck = { id: 0, nome: '', cards: [{ frente: '', verso: '' }] };
     private currentFlashcard: Card = { frente: '', verso: '' }
     private queue: Card[] = [];
-    private estatisticas: { acertos: number, erros: number } = { acertos: 0, erros: 0 }
-    public flagExibeDefinicao: boolean = true;
+    public estatisticas: Estatisticas = { acertos: 0, erros: 0 }
+
+    private flagExibeDefinicao: boolean = true;
+    private flagExibeEstatisticas: boolean = false;
+    private flagExibeFlashcard: boolean = true;
+
 
 
     constructor(
@@ -39,6 +43,10 @@ export class FlashcardPlayComponent implements OnInit {
         })
     }
 
+    public finalizar() {
+        this.__router.navigate(['DeckView', { id: this.deck.id }])
+    }
+
     public acerto(): void {
         this.estatisticas.acertos++
         this.flagExibeDefinicao = true;
@@ -56,8 +64,17 @@ export class FlashcardPlayComponent implements OnInit {
             this.currentFlashcard = this.queue.shift();
         } else {
             // Encerra
-            this.__router.navigate(['DeckView', { id: this.deck.id }])
+            this.flagExibeEstatisticas = true;
+            this.flagExibeFlashcard = false;
         }
+    }
+
+    get exibeEstatisticas(): boolean {
+        return this.flagExibeEstatisticas;
+    }
+
+    get exibeFlashcard() : boolean {
+        return this.flagExibeFlashcard;
     }
 
     set exibeDefinicao(value: boolean) {
@@ -72,7 +89,21 @@ export class FlashcardPlayComponent implements OnInit {
         return this.currentFlashcard;
     }
 
+    get acertos() : number {
+        return this.estatisticas.acertos
+    }
+
+    get erros() : number {
+        return this.estatisticas.erros
+    }
+
     get diagnose() {
         return JSON.stringify(this.deck)
     }
+
+}
+
+interface Estatisticas {
+    acertos: number,
+    erros: number
 }

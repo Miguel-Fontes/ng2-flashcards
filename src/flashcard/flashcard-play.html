@@ -3,15 +3,25 @@
     @import url('./../deck/objects.css');
     @import url('./flashcard.css');
 </style>
-<flashcard [isHidden]="exibeDefinicao" (visibility)="exibeDefinicao=($event)" [card]="currentCard"></flashcard>
+<div *ngIf="exibeFlashcard">
+    <flashcard [isHidden]="exibeDefinicao" (visibility)="exibeDefinicao=($event)" [card]="currentCard"></flashcard>
 
-<div class="c-flashcard-controls">
-    <ul class="o-unstyled-list o-horizontal-list">
-        <li class="o-horizontal-list__item">
-            <button class="[ o-btn o-btn--ok o-btn--big ]" (click)="acerto()">Acerto</button>
-        </li>
-        <li class="o-horizontal-list__item">
-            <button class="[ o-btn o-btn--danger o-btn--big ]" (click)="erro()">Erro</button>
-        </li>
+    <div class="c-flashcard-controls">
+        <ul class="o-unstyled-list o-horizontal-list">
+            <li class="o-horizontal-list__item">
+                <button class="[ o-btn o-btn--ok o-btn--big ]" (click)="acerto()">Acerto</button>
+            </li>
+            <li class="o-horizontal-list__item">
+                <button class="[ o-btn o-btn--danger o-btn--big ]" (click)="erro()">Erro</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="exibeEstatisticas">
+    <ul class="o-unstyled-list">
+        <li>Acertos: {{acertos}}</li>
+        <li>Erros: {{erros}}</li>
     </ul>
+    <button class="o-btn o-btn--ok o-btn--big" (click)="finalizar()">Finalizar</button>
 </div>
