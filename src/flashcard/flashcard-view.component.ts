@@ -3,7 +3,8 @@ import {Card} from './../deck/card';
 
 @Component({
     selector: 'flashcard',
-    templateUrl: 'src/flashcard/flashcard-view.html'
+    templateUrl: 'src/flashcard/flashcard-view.html',
+    styleUrls: ['src/flashcard/flashcard.css'],
 })
 
 export class FlashcardViewComponent implements OnInit {

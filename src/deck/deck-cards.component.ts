@@ -7,7 +7,8 @@ import {DeckService} from './../services/deck.service';
 
 @Component({
     selector: 'flashcards-form',
-    templateUrl: 'src/deck/deck-cards.html'
+    templateUrl: 'src/deck/deck-cards.html',
+    styleUrls: ['src/deck/deck.css', 'src/deck/objects.css']
 })
 
 export class DeckCardsComponent implements OnInit {
@@ -28,7 +29,6 @@ export class DeckCardsComponent implements OnInit {
 
     adicionaLinha(event) {
         if (event && event.keyCode === 9) {
-            console.log(event || 'none')
             this.cards.push({ frente: '', verso: '' })
         } else if (!event) {
             this.cards.push({ frente: '', verso: '' })

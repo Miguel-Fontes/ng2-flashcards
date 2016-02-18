@@ -1,8 +1,3 @@
-<style>
-    @import url('./../deck/deck.css');
-    @import url('./../deck/objects.css');
-    @import url('./flashcard.css');
-</style>
 <div *ngIf="exibeFlashcard">
     <flashcard [isHidden]="exibeDefinicao" (visibility)="exibeDefinicao=($event)" [card]="currentCard"></flashcard>
 

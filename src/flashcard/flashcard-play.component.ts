@@ -8,6 +8,7 @@ import {Card} from './../deck/card';
 @Component({
     selector: 'flashcard-play',
     templateUrl: 'src/flashcard/flashcard-play.html',
+    styleUrls: ['src/deck/deck.css', 'src/deck/objects.css', 'src/flashcard/flashcard.css'],
     directives: [FlashcardViewComponent]
 })
 
