@@ -5,7 +5,8 @@ import {Deck} from './deck'
 
 @Component({
     selector: 'deck-list',
-    templateUrl: 'src/deck/deck-list.html'
+    templateUrl: 'src/deck/deck-list.html',
+    styleUrls: ['src/deck/deck.css', 'src/deck/objects.css']
 })
 
 export class DeckListComponent implements OnInit {

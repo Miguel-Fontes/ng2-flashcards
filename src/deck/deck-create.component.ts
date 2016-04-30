@@ -6,7 +6,8 @@ import {DeckService} from './../services/deck.service'
 
 @Component({
     selector: 'deck-create',
-    templateUrl: 'src/deck/deck-create.html'
+    templateUrl: 'src/deck/deck-create.html',
+    styleUrls: ['src/deck/deck.css', 'src/deck/objects.css', 'src/deck/ng.css']
 })
 
 export class DeckCreateComponent implements OnInit {
@@ -14,9 +15,9 @@ export class DeckCreateComponent implements OnInit {
     public deck;
 
     constructor(
-        private __deckService : DeckService,
+        private __deckService: DeckService,
         private __router: Router
-        ) { }
+    ) { }
 
     ngOnInit() {
         this.deck = new DeckModel(0, '', [])
@@ -24,7 +25,7 @@ export class DeckCreateComponent implements OnInit {
 
     onSubmit() {
         this.__deckService.add(this.deck)
-        this.__router.navigate(['DeckView', {id: this.deck.id}])
+        this.__router.navigate(['DeckView', { id: this.deck.id }])
     }
 
     get diagnostic() {

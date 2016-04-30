@@ -1,8 +1,5 @@
-<style>
-    @import url('deck.css');
-    @import url('objects.css');
-</style>
 <h3 class="c-deck__name">{{deck.nome}}</h3>
+<button class="o-btn" (click)="recallCards()">Recall</button>
 <div data-ui-component="deck-cards-list">
     <h4>Cards</h4>
     <button class="o-btn" (click)="adicionaCards()">Adicionar</button>
